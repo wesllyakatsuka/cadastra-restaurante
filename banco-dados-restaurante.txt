@@ -1,0 +1,22 @@
+﻿mysql -uroot -p
+digite ENTER
+
+show schemas;
+
+create database restaurante;
+
+use restaurante;
+
+create table restaurantes(id integer auto_increment primary key, nome varchar(255), preco float(6, 2), descricao varchar(255), categoria_id integer, delivery boolean default false);
+
+create table categorias(id integer auto_increment primary key, nome varchar(255));
+
+insert categorias (nome) values('---selecione---');
+insert categorias (nome) values('Churrascaria');
+insert categorias (nome) values('Hamburgueria');
+insert categorias (nome) values('Japones');
+insert categorias (nome) values('Pizzaria');
+
+show tables;
+desc categorias;
+desc restaurantes;
